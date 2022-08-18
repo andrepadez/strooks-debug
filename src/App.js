@@ -21,8 +21,8 @@ function App() {
   return (
     <div>
       <h3 className="m-5 p-5 text-center">
-        This version is working fine, as it imports the components and hooks directly from inside
-        the project{' '}
+        This version is NOT working fine, as it imports the components and hooks from
+        node_modules/strooks
       </h3>
       <div className="j-between bg-danger">
         <div className="flex p-5 h-50 column a-center pt-5 gap-1 black of-hidden">
