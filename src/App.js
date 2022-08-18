@@ -1,12 +1,11 @@
 import 'strooks/dist/styles.scss'
 
 import { useRef } from 'react'
-// import { useForm, useStyleVars, TypeWriter } from 'strooks'
-// import {  } from 'strooks'
+import { useForm, useStyleVars, TypeWriter } from 'strooks'
 
-import TypeWriter from 'strooks_local/Components/TypeWriter'
-import useForm from 'strooks_local/Hooks/useForm'
-import useStyleVars from 'strooks_local/Hooks/useStyleVars'
+// import TypeWriter from 'strooks_local/Components/TypeWriter'
+// import useForm from 'strooks_local/Hooks/useForm'
+// import useStyleVars from 'strooks_local/Hooks/useStyleVars'
 
 function App() {
   const { styleVars, propsMap, setVar } = useStyleVars()
