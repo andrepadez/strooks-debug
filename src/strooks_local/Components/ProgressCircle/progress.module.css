@@ -1,0 +1,33 @@
+.progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+.progress svg circle {
+  fill: none;
+  transform: translate(5px, 5px);
+  transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.progress svg circle {
+  stroke-dashoffset: -25;
+  stroke-dasharray: 100;
+}

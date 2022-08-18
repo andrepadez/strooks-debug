@@ -1,0 +1,36 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import StatusDot from './StatusDot'
+
+<Meta title="UI Components/StatusDot" component={StatusDot} />
+
+# StatusDot
+
+export const Template = args => (
+  <div className="container">
+    <div className="row">
+      <div className="col">
+        <StatusDot {...args} />
+      </div>
+    </div>
+  </div>
+)
+
+### basic
+
+<p>
+  by default, the Dot is rendered with 10*10px, so it's easy to use the scale property for exact
+  values
+</p>
+
+<Canvas>
+  <Story name="default" args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="large/primary" args={{ type: 'primary', scale: 4 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

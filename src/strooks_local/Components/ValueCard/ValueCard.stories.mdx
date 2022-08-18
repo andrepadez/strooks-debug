@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import ValueCard from './ValueCard'
+
+<Meta title="UI Components/Value Card" component={ValueCard} />
+
+# Value Card
+
+export const Template = (args) => <ValueCard {...args} />
+
+### basic
+
+<Canvas>
+  <Story name="basic" args={{ title: 'Leads', subtitle: 'total', value: 5000 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### with <i>after</i>
+
+<Canvas>
+  <Story name="with after" args={{ title: 'Change', subtitle: 'percent', value: 54, after: '%' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### with <i>before</i>
+
+<Canvas>
+  <Story name="with before" args={{ title: 'Amount', value: 1720, before: '£' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

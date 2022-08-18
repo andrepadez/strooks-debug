@@ -1,0 +1,37 @@
+// media-queries
+$phone: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$screen: 1200px;
+
+// Colors
+:root {
+  --color-primary: #7380ec;
+  --color-primary-variant: #111e88;
+  --color-white: white;
+  --color-dark: #363949;
+  --color-dark-variant: #677483;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-danger: #ff7782;
+  --color-success: #2dba8b;
+  --color-warning: #ffbb55;
+  // --box-shadow: 0 2rem 3rem var(--color-light);
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --padding-card: 1.8rem;
+  --padding-1: 1.2rem;
+}
+
+body.dark-theme {
+  --color-white: #181a1e;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  // --box-shadow: 0 1rem 2rem var(--color-light);
+}

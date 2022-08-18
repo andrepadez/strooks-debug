@@ -1,0 +1,63 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+import DataTable from '../DataTable'
+import TableContainer from '../TableContainer'
+import PEOPLE from './people.json'
+
+<Meta title="UI Components/DataTable/Basic" component={DataTable} />
+
+# Data
+
+#
+
+## pure data
+
+<div style={{ fontSize: '1.2rem', color: 'black', marginTop: '20px' }}>
+  <p>
+    <strong>pure data</strong> means no configuration, just dumping an array of objects into{' '}
+    <i>data</i>.
+  </p>
+  <p>It will use the keys (of the first object) as Column Titles</p>
+</div>
+
+```javascript
+import DataTable from 'Components/DataTable'
+
+const MyComponent = ({ people }) => {
+  return <DataTable data={people} />
+}
+```
+
+export const Template = args => <DataTable {...args} />
+
+<Canvas>
+  <h4>Pure Data</h4>
+  <hr />
+  <Story name="001 - pure data" args={{ data: PEOPLE.slice(0, 6) }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## simple columns config
+
+<div style={{ fontSize: '1.2rem', color: 'black', marginTop: '20px' }}>
+  <p>
+    using a <i>columns</i> array, you can filter what columns to show
+  </p>
+</div>
+
+```javascript
+import DataTable from 'Components/DataTable/'
+
+const MyComponent = ({ people }) => {
+  return <DataTable data={people} columns={['name', 'email', 'city', 'creditcard']} />
+}
+```
+
+<Canvas>
+  <Story
+    name="002 - simple columns config"
+    args={{ data: PEOPLE.slice(0, 6), columns: ['name', 'email', 'city', 'creditcard'] }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
